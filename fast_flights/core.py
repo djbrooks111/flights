@@ -10,7 +10,7 @@ from .primp import Client, Response
 
 
 def fetch(params: dict) -> Response:
-    client = Client(impersonate="chrome_131", verify=False)
+    client = Client(impersonate="chrome_135", verify=False)
     res = client.get("https://www.google.com/travel/flights", params=params)
     assert res.status_code == 200, f"{res.status_code} Result: {res.text_markdown}"
     return res
